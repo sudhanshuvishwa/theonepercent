@@ -2,8 +2,9 @@
 #include<stdlib.h>
 
 int main(){
-    int age = 30;
-    int *ptr=&age;
+    int age=30;
+    int *ptr;
+    ptr=&age;
     printf("%d\n", *ptr);
-    printf("%d", *&*ptr);
+    printf("%d",age) ;
 }
