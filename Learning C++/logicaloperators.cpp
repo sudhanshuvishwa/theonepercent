@@ -7,7 +7,7 @@ int main(){
 
  
     std::cout<< std::endl;
-    std::cout<<std::boolalpha;
+    std::cout<< std::boolalpha;
 
     std::cout<<"(a>b)&&(a>c):"<<((a > b) && ( a > c))<<std::endl;
     std::cout<<"(a==b)||(b<=c):"<<((a==b)||(b<=c))<<std::endl;
