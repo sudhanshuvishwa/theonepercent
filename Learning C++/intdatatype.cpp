@@ -21,6 +21,6 @@ int main(){
     int g = d+a;
     std::cout<<f<<std::endl;
     std::cout<<g<<std::endl;
-    std::cout<<sizeof(int)<<std::endl;
+    std::cout<<sizeof(int)<<std::endl; 
     return 0;
 }
