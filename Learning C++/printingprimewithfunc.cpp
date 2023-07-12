@@ -2,17 +2,12 @@
 #include<math.h>
 
 bool isprime(int a){
-    int count{0};
     for(int i=2;i<=sqrt(a);i++){
         if(a%i==0){
-            count++;
+            return false;
         }
     }
-    if(count<=2){
-        return true;
-    }else{
-        return false;
-    }
+    return true;
 }
 int main()
 {
