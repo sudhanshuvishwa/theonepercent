@@ -18,7 +18,7 @@ int main(){
                 arr[i+1]= temp;
             }
         }
-        counter++;
+        counter++; 
     }
 
     for(int i=0;i<size;i++){

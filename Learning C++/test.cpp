@@ -1,29 +1,29 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
+int main() {
+	int num;
+	std::cin >> num;
+	
+	for(int i =0;i<num;i++){
+		int size{},key{};
+		std::cin>>size>>key;
+		int arr[size];
+		for(int i =0;i<size;i++){
+			std::cin>>arr[i];
+		}
 
-bool isprime(int a){
-    int count{0};
-    for(int i=2;i<=sqrt(a);i++){
-        if(a%i==0){
-            count++;
-        }
-    }
-    if(count<=2){
-        return true;
-    }else{
-        return false;
-    }
-}
-int main()
-{
-    int num1,num2;
-    std::cout<<"Enter number 1 and 2 respectively"<<std::endl;
-    std::cin>>num1>>num2;
-    for(int i=num1;i<=num2;i++){
-        if(isprime(i)){
-            std::cout<<i<<std::endl;
-        }
-    }
-    return 0;
-}
+		for(int i=0;i<key;i++){
+            for(int j=0;j<size;j++){
+            int temp=arr[j+1];
+			arr[j+1]=arr[j];
+            arr[j]=arr[size-1];
+			
+            }
+			
+		}
+		for(int i=0;i<size;i++){
+			std::cout<<arr[i];
+		}
+	}
+	
 
+}
