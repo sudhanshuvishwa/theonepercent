@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Awesome Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li class="more">
+          <a href="#">More</a>
+          </li>
+      </ul>
+        <script>
+          const menuItems = $('.menu-item');
+          const moreButton = $('.more-button');
+      
+          function adjustMenu() {
+            const totalWidth = $('.menu').width();
+  let availableWidth = totalWidth;
+
+  menuItems.each(function() {
+    availableWidth -= $(this).outerWidth(true);
+  });
+
+  if (availableWidth < 0) {
+    moreButton.show();
+    menuItems.slice(availableWidth).hide();
+  } else {
+    moreButton.hide();
+    menuItems.show();
+  }
+          }
+      
+          $(window).resize(adjustMenu);
+          adjustMenu();
+        </script>
+    </nav>
+  </header>
+
+  <main>
+    <div class="carousel">
+      <article class="card">
+        <img src="image1.jpeg" alt="Image 1">
+        <h3>Product 1</h3>
+        <p>Description of product 1</p>
+      </article>
+      </div>
+
+    </main>
+
+  <footer>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
